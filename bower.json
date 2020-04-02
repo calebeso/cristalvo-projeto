@@ -1,0 +1,18 @@
+{
+  "name": "cristalvo",
+  "homepage": "https://github.com/calebeso/cristalvo-projeto",
+  "authors": [
+    "calebeso <calebeso045@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
