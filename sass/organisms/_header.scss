@@ -2,7 +2,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $preto;  
+    background-color: $branco;  
     @include clearfix;
     .logo{
         float:left;
@@ -15,7 +15,6 @@ nav ul li a {
 } .home{
     color: $laranja !important;
 }
-
 
 .button_container {
     position: fixed;
@@ -45,6 +44,20 @@ nav ul li a {
         transform: translateY(-11px) translateX(0) rotate(-45deg);
         background: $color-active;
       }
+    }
+
+    @include breakpoint($tablet){
+      top: 3%;
+      right: 5%;
+      height: 25px;
+      width: 35px;
+    }
+
+    @include breakpoint($celular){
+      top: 4%;
+      right: 6%;
+      height: 23px;
+      width: 33px;
     }
 }
 
@@ -173,8 +186,5 @@ span {
       }
 
 
-      .home img{
-          margin-top: 5%;
-          width: 100%;
-      }
+
   
