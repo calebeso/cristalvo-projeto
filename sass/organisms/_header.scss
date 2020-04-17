@@ -2,24 +2,37 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    height: 17%;
     background-color: $branco;  
+    @include breakpoint($tablet){
+   //   height: 10%;
+    }
     @include clearfix;
     .logo{
         float:left;
-    } 
+    } .img{
+      margin-top: 15px;
+      width: 180px;
+        height: 90px;
+    }
+}
+
+.menu{
+  display: flex;
+  align-items: center;
 }
 
 nav ul li a { 
     text-decoration: none !important;
     color: $branco !important;
 } .home{
-    color: $laranja !important;
+    color: #9b5820 !important;
 }
 
 .button_container {
     position: fixed;
-    top: 4%;
-    right: 3%;
+    //top: 4%;
+    right: 8%;
     height: $button-height;
     width: $button-width;
     cursor: pointer;
@@ -54,7 +67,7 @@ nav ul li a {
     }
 
     @include breakpoint($celular){
-      top: 4%;
+      top: 6%;
       right: 6%;
       height: 23px;
       width: 33px;
@@ -63,7 +76,7 @@ nav ul li a {
 
 span {
     position: fixed ; 
-    background: $color-main;
+    background: #9b5820;
     border: none;
     height: 5px;
     width: 100%;
@@ -117,8 +130,9 @@ span {
         }
         nav {
           position: relative;
+          z-index: 1;
           height: 70%;
-          top: 45%;
+          top: 50%;
           transform: translateY(-50%);
           font-size: 40px;
           font-family: 'Vollkorn', serif;
