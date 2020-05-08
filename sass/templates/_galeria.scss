@@ -1,0 +1,136 @@
+body{
+    position: relative;
+    z-index:-1;
+}
+
+
+@include mobile(){
+    .trabalhos{
+        margin-top: 37%;
+        position: relative;
+        z-index: -1;
+        right: 20px;
+    }
+}
+
+
+@include tablet(){
+    .trabalhos{
+        margin-top: 23%;
+        position: relative;
+        z-index: -1;
+        right: 20px;
+    }
+}
+
+@include desktop(){
+    .trabalhos{
+        margin-top: 10%;
+        position: relative;
+        z-index: -1;
+        right: 20px;
+    }
+}
+
+
+.coluna {
+
+        @include clearfix;
+        @include make-row;
+        list-style: none;
+     }
+      .linha{
+        @include make-sm-column(3);
+        @include make-xs-column(6);
+        list-style-type: none;
+        overflow: hidden;
+        }  
+
+        figure{
+            position: relative;
+            &:hover{
+                .art{
+                    top: 0;
+                    @include transition(.3s);
+                }
+                a{
+                    @include opacity(1);
+                    
+                }
+            }
+        }
+
+        
+        img{
+            @include img-responsive();
+        } figcaption a{
+            text-align: center;
+            position: absolute;
+            z-index: 2;
+            color: $branco;
+            width: 100%;
+            top: 40%;
+            @include opacity(0);
+            text-decoration: none !important;
+            font-family: 'Quicksand', sans-serif;
+            
+
+            h3{
+               margin: 0;
+            }
+        }
+
+.art{
+    background-color: $preto;
+    position: absolute;
+    left: 0;
+    top: 108%;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include opacity(.8);
+}
+
+@include mobile(){
+.art{
+    background-color: $preto;
+    position: absolute;
+    left: 0;
+    top: 113%;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include opacity(.8);
+}
+}
+
+@include tablet(){
+    .art{
+        background-color: $preto;
+        position: absolute;
+        left: 0;
+        top: 113%;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include opacity(.8);
+    }
+    }
+ 
+
+section{
+    height: 100vh;
+}
+
+.overlay {
+    &.open{ 
+        section{
+            position: relative;
+            z-index: 1;
+         
+        }
+    }
+}

@@ -1,0 +1,71 @@
+body{
+    position: relative;
+    z-index:-1;
+}
+
+@include mobile(){
+.contato{
+    margin-top: 40%;
+    position: relative;
+        z-index: -1;
+}
+}
+
+@include tablet(){
+    .contato{
+        margin-top: 25%;
+        position: relative;
+            z-index: -1;
+    }
+}
+
+@include desktop(){
+    .contato{
+        margin-top: 13%;
+        position: relative;
+            z-index: -1;
+    }
+    }
+
+form{
+    @include clearfix();
+    @include make-row();
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2);
+    font-size: 17px;
+    font-family: 'Quicksand', sans-serif;
+    color: #2A363B;
+}
+
+input, textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #2A363B;
+    padding: 7px;
+    margin-top: 15px;
+
+    &:hover{
+        border-bottom: 1px solid $laranja;
+        transition:all .3s linear;
+    }
+
+    &:focus{
+        border: 2px solid $laranja !important;
+    }
+}
+
+
+button{
+    background-color: transparent;
+    display: table;
+    margin: 0 auto !important;
+    padding: 5px 20px;
+    border: 1px solid #2A363B;
+
+       &:hover{
+       background-color: transparent;
+       border: 1px solid $laranja;
+        transition:all .3s linear;
+    }
+
+}
