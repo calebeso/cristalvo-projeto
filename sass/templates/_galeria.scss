@@ -5,7 +5,7 @@ body{
 
 
 @include mobile(){
-    .trabalhos{
+    .galerias{
         margin-top: 37%;
         position: relative;
         z-index: -1;
@@ -15,7 +15,7 @@ body{
 
 
 @include tablet(){
-    .trabalhos{
+    .galerias{
         margin-top: 23%;
         position: relative;
         z-index: -1;
@@ -24,7 +24,7 @@ body{
 }
 
 @include desktop(){
-    .trabalhos{
+    .galerias{
         margin-top: 10%;
         position: relative;
         z-index: -1;
@@ -73,10 +73,26 @@ body{
             @include opacity(0);
             text-decoration: none !important;
             font-family: 'Quicksand', sans-serif;
+
+            @include mobile(){
+                top: 25%;
+            }
+
+            @include tablet(){
+                top: 22%;
+                font-size: 12px;
+            }
             
 
             h3{
                margin: 0;
+               @include mobile(){
+                   font-size:14px;
+               }
+
+               @include tablet(){
+                   font-size:16px;
+               }
             }
         }
 
